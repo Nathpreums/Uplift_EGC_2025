@@ -73,13 +73,10 @@ def generate_for_t(nb_t,nb_df,nb_ind_per_t):
 
 @ray.remote
 def generate_plein_de_datasets(motifs,plot=False,nb_ind_per_t=10000,NRA=0,suffixe='',suffixe_motif='',titre=''):
-    #parent_directory = "Datasets_générés"+str(suffixe_motif) 
-    #/data/userstorage/nleboudec
-    parent_directory = os.path.join("/", "data", "userstorage", "nleboudec", "Datasets_générés" + str(suffixe_motif))
+    #parent_directory = A ECRIRE !!
     os.makedirs(parent_directory, exist_ok=True)
     timestamp = datetime.now().strftime('%H-%M_%d-%m-%Y')
     name_directory = 'df'+str(suffixe)+timestamp
-    #path = os.path.join(parent_directory, name_directory)
     path = parent_directory
     os.makedirs(path, exist_ok=True)
     c=0
